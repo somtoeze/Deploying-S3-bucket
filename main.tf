@@ -23,7 +23,7 @@ resource "aws_s3_bucket" "app_bucket" {
   bucket = "startup-app-${data.aws_caller_identity.current.account_id}-assets" # ← CORRECTED
 
   tags = {
-    Name        = "startup-app-assets"
+    Name        = "Olivan App Assets"
     Environment = "dev"
     ManagedBy   = "Terraform"
   }
