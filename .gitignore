@@ -1,0 +1,32 @@
+# Terraform
+.terraform/
+.terraform.lock.hcl
+*.tfstate
+*.tfstate.*
+*.tfvars
+*.tfvars.json
+terraform.tfvars
+terraform.tfvars.json
+crash.log
+crash.*.log
+*.hcl
+
+# Terraform override files
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# CLI configuration files
+.terraformrc
+terraform.rc
+
+# Provider binaries
+*.exe
+*.dll
+*.so
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
