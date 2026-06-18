@@ -6,21 +6,21 @@ terraform {
     }
   }
 
-#   backend "s3" {
-#     bucket  = "startup-terraform-state-660119432667" # ← YOUR ACTUAL ACCOUNT ID
-#     key     = "dev/terraform.tfstate"
-#     region  = "us-east-1"
-#     encrypt = true
-#   }
- }
+  backend "s3" {
+    bucket  = "startup-terraform-state-660119432667"
+    key     = "dev/terraform.tfstate"
+    region  = "us-east-1"
+    encrypt = true
+  }
+}
 
 provider "aws" {
   region = "us-east-1"
 }
 
-# S3 bucket for static assets or logs
+# S3 bucket for Olivan App Assets
 resource "aws_s3_bucket" "app_bucket" {
-  bucket = "startup-app-${data.aws_caller_identity.current.account_id}-assets" # ← CORRECTED
+  bucket = "olivan-app-assets-660119432667"
 
   tags = {
     Name        = "Olivan App Assets"
@@ -50,11 +50,15 @@ resource "aws_s3_bucket_versioning" "versioning" {
 # Get current account info
 data "aws_caller_identity" "current" {}
 
-# Output the bucket name (so you don't have to look it up)
+# Outputs
 output "bucket_name" {
   value = aws_s3_bucket.app_bucket.id
 }
 
 output "bucket_arn" {
   value = aws_s3_bucket.app_bucket.arn
+}
+
+output "account_id" {
+  value = data.aws_caller_identity.current.account_id
 }
