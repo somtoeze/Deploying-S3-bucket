@@ -28,7 +28,7 @@ resource "aws_iam_user" "app_user" {
   name = "app-user"
 
   tags = {
-    Name        = "app-user"
+    Name        = "olivian_app_user"
     Environment = "dev"
     ManagedBy   = "Terraform"
   }
