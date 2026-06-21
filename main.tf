@@ -7,7 +7,7 @@ terraform {
   }
 
 #   backend "s3" {
-#     bucket  = "startup-terraform-state-660119432667"
+#     bucket  = "startup-terraform-state-662667"
 #     key     = "dev/terraform.tfstate"
 #     region  = "us-east-1"
 #     encrypt = true
@@ -20,7 +20,7 @@ provider "aws" {
 
 # S3 bucket for Olivan App Assets
 resource "aws_s3_bucket" "app_bucket" {
-  bucket = "olivan-app-assets-660119432667"
+  bucket = "olivan-app-assets-6632667"
 
   tags = {
     Name        = "Olivan App Assets"
