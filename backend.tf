@@ -1,5 +1,5 @@
 # resource "aws_s3_bucket" "terraform_state" {
-#   bucket = "startup-terraform-state-660119432667" # ← YOUR ACTUAL ACCOUNT ID
+#   bucket = "startup-terraform-state-ACTUAL ACCOUNT ID" # ← YOUR ACTUAL ACCOUNT ID
 
 #   lifecycle {
 #     prevent_destroy = true
