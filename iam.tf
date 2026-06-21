@@ -15,8 +15,8 @@ resource "aws_iam_policy" "app_s3_policy" {
           "s3:ListBucket"
         ]
         Resource = [
-          "arn:aws:s3:::olivan-app-assets-660119432667",
-          "arn:aws:s3:::olivan-app-assets-660119432667/*"
+          "arn:aws:s3:::olivan-app-assets-660667",
+          "arn:aws:s3:::olivan-app-assets-62667/*"
         ]
       }
     ]
